@@ -78,18 +78,6 @@ dependencies {
     minecraftRuntimeLibraries("com.tianscar.imageio:imageio-apng:1.0.1")
     minecraftRuntimeLibraries("org.joml:joml:1.10.8")
 
-    /*minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-reflect:2.0.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-scripting-jvm:2.0.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-scripting-jvm-host:2.0.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-script-runtime:2.0.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-compiler-embeddable-mcfriendly:2.0.0")  { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:2.0.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable:2.0.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-metadata-jvm:2.0.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.0.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlinx:kotlinx-datetime-jvm:0.4.0") { exclude("org.jetbrains.kotlin") }
-    minecraftRuntimeLibraries("org.jetbrains.kotlin:kotlin-scripting-common:2.0.0") { exclude("org.jetbrains.kotlin") }*/
-
     implementation("io.github.classgraph:classgraph:4.8.173")
 
     implementation("ru.hollowhorizon:HollowCore-fabric-1.19.2:2.0.12:dev")
