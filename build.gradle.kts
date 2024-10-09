@@ -83,6 +83,7 @@ dependencies {
     implementation("ru.hollowhorizon:HollowCore-fabric-1.19.2:2.0.12:dev")
 }
 
+
 tasks.processResources {
     inputs.property("version", project.version)
     inputs.property("minecraft_version", project.property("minecraft_version"))
