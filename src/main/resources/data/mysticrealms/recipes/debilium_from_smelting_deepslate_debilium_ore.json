@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 1.0,
   "ingredient": {
-    "item": "mysticrealms:deepslate_debilшum_ore"
+    "item": "mysticrealms:deepslate_debilium_ore"
   },
   "result": "mysticrealms:debilium"
 }
