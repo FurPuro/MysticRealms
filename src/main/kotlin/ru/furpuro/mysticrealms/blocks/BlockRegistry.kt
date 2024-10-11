@@ -104,6 +104,7 @@ class RotatableBlock(settings : Properties,itemProperties: Item.Properties) : Ro
         builder.add(AXIS)
     }
 
+    @Deprecated("Deprecated in Java", ReplaceWith("Shapes.block()", "net.minecraft.world.phys.shapes.Shapes"))
     override fun getShape(blockState: BlockState, blockGetter: BlockGetter, blockPos: BlockPos, collisionContext: CollisionContext): VoxelShape {
         return Shapes.block()
     }
