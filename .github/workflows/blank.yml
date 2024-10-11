@@ -51,7 +51,7 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          name: "[MULTI-VERSIONED BUILD]"
+          name: "[BUILD]"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "latest"
           removeArtifacts: true
