@@ -3,12 +3,14 @@ package ru.furpuro.mysticrealms.blocks
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.core.Direction.Axis
+import net.minecraft.util.valueproviders.IntProvider
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.context.BlockPlaceContext
 import net.minecraft.world.level.BlockGetter
 import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.DropExperienceBlock
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.StateDefinition
@@ -33,7 +35,7 @@ object BlockRegistry : HollowRegistry() {
             Properties.of(Material.STONE)
                 .color(MaterialColor.STONE)
                 .requiresCorrectToolForDrops()
-                .strength(2f)
+                .strength(1.75f)
                 .sound(SoundType.STONE)
             ,
             Item.Properties()
@@ -44,7 +46,7 @@ object BlockRegistry : HollowRegistry() {
         Block(
             Properties.of(Material.METAL)
                 .requiresCorrectToolForDrops()
-                .strength(1.5f)
+                .strength(2.25f)
                 .sound(SoundType.METAL)
             ,
             Item.Properties()
@@ -56,7 +58,7 @@ object BlockRegistry : HollowRegistry() {
             Properties.of(Material.STONE)
                 .color(MaterialColor.DEEPSLATE)
                 .requiresCorrectToolForDrops()
-                .strength(4f)
+                .strength(3.25f)
                 .sound(SoundType.DEEPSLATE),
             Item.Properties()
                 .tab(CreativeModeTab.TAB_MISC)
