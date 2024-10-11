@@ -18,7 +18,7 @@ jobs:
   build:
     strategy:
       matrix:
-        java: [21] 
+        java: [17] 
         os: [ubuntu-20.04]
     runs-on: ${{ matrix.os }}
     if: |
@@ -39,7 +39,7 @@ jobs:
         with:
           arguments: jar
       - name: capture build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '21' }}
+        if: ${{ runner.os == 'Linux' && matrix.java == '17' }}
         uses: actions/upload-artifact@v4
         with:
           name: Artifacts
@@ -51,7 +51,7 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          name: "[MULTI-VERSIONED BUILD]"
+          name: "[BUILD]"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "latest"
           removeArtifacts: true
