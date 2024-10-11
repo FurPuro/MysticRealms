@@ -112,7 +112,3 @@ class RotatableBlock(settings : Properties,itemProperties: Item.Properties) : Ro
         return defaultBlockState().setValue(AXIS, blockPlaceContext.clickedFace.axis)
     }
 }
-
-
-
-
