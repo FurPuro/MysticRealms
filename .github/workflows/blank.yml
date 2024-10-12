@@ -13,6 +13,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: write
+  packages: write
+  issues: write
+  pull-requests: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
@@ -44,17 +49,18 @@ jobs:
         with:
           name: Artifacts
           path: |
-            libs/*.jar
-            !libs/*-dev.jar
-            !libs/*-sources.jar
+            build/libs/*.jar
+            !build/libs/*-dev.jar
+            !build/libs/*-sources.jar
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          name: "[BUILD]"
+          name: "[AUTOMATIC BUILD FABRIC 1.19.2]"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "latest"
           removeArtifacts: true
           allowUpdates: true
-          artifacts: "libs/*.jar"
+          artifacts: "build/libs/*.jar"
           artifactContentType: application/java-archive
+          body: "Needs: HollowCore 2.0.12, Kotlin language kotlin 1.12.2+kotlin.2.0.20"
