@@ -59,7 +59,7 @@ jobs:
           name: "[AUTOMATIC BUILD FABRIC 1.19.2]"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "latest"
-          removeArtifacts: true
+          removeArtifacts: false
           allowUpdates: true
           artifacts: "build/libs/*.jar"
           artifactContentType: application/java-archive
