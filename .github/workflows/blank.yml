@@ -60,6 +60,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "latest"
           removeArtifacts: false
+          generateReleaseNotes: true
+          createRelease: true
           allowUpdates: true
           artifacts: "build/libs/*.jar"
           artifactContentType: application/java-archive
