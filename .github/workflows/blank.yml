@@ -56,13 +56,12 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          name: "[AUTOMATIC BUILD FABRIC 1.19.2]"
+          name: "[AUTOMATIC BUILD FABRIC 1.19.2]-${{ github.run_id }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "latest"
-          removeArtifacts: true
+          tag: "build-${{ github.run_id }}"
+          removeArtifacts: false
           generateReleaseNotes: true
-          replacesArtifacts: false
-          allowUpdates: true
+          allowUpdates: false
           artifacts: "build/libs/*.jar"
           artifactContentType: application/java-archive
           body: "Needs: HollowCore 2.0.12, Kotlin language kotlin 1.12.2+kotlin.2.0.20"
