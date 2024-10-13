@@ -52,11 +52,14 @@ jobs:
             build/libs/*.jar
             !build/libs/*-dev.jar
             !build/libs/*-sources.jar
+      - name: Remove latest tag from old release
+        id: remove_latest_tag
+        run: gh release delete latest -y
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          name: "[AUTOMATIC BUILD FABRIC 1.19.2]-${{ github.run_id }}"
+          name: "[AUTOMATIC BUILD FABRIC 1.19.2]"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "build-${{ github.run_id }}"
           removeArtifacts: false
