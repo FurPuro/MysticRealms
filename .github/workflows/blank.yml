@@ -55,6 +55,8 @@ jobs:
       - name: Remove latest tag from old release
         id: remove_latest_tag
         run: gh release delete latest -y
+        env:
+          gh_token:  ${{ secrets.GITHUB_TOKEN }}
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1
