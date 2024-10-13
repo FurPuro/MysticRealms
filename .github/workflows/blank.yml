@@ -61,7 +61,7 @@ jobs:
           tag: "latest"
           removeArtifacts: false
           generateReleaseNotes: true
-          createRelease: true
+          replacesArtifacts: false
           allowUpdates: true
           artifacts: "build/libs/*.jar"
           artifactContentType: application/java-archive
